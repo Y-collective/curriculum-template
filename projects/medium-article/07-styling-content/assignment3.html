@@ -1,0 +1,17 @@
+<p>A kép még nem teljesen úgy néz ki, mint az <a href="https://medium.freecodecamp.com/please-do-learn-to-code-233597dd141c#.nlytqw7cv" title="Please do learn to code" target="_blank">eredeti cikkben</a>. Állítsd be, hogy pont olyan széles legyen, mint az oldal:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    img {
+      height: auto;
+      width: 100%;
+    }
+  </code>
+</pre>
+
+<p>A <code>width</code> (szélesség) adja meg a kép kívánt szélességét. Ha nem adsz meg méretet, akkor a kép eredeti méretét használja a böngésző. A példában 100%-ot adtunk meg méretnek, mert szeretnénk, ha a teljes oldalszélességet kitöltené a kép. Most ennél egy kicsit mégis kisebb lett az eredmény, de ezt mindjárt orvosoljuk.</p>
+
+<p>A <code>height</code> (magasság) adja meg a kép kívánt magasságát. A példában használt <code>auto</code> érték azt mondja meg a böngészőnek, hogy nem tudjuk előre, milyen magas képet szeretnénk, de ha bármikor átméreteződne, akkor maradjon arányos.</p>
+
+<p class="tip-advanced">Pro tipp: Ha nem fix méretet használsz (fix méret lenne például 200px), hanem százalékot, akkor különböző kijelzőkön (más méretű böngészőablak, tablet, telefon) is hasonló eredményt érhetsz el. Próbáld meg átméretezni az output panelt; a kép mérete arányosan változik.</p>
+

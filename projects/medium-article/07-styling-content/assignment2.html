@@ -1,0 +1,47 @@
+<p>Az eredeti cikkben a címsor középre van igazítva, és egy másik betűtípussal van kiírva.</p>
+
+<p>Állítsd be a betűtípust és igazítsd középre a szöveget a következő kódrészlettel kibővítve a <code>h1</code>-re vonatkozó szabályokat:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    text-align: center;
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+  </code>
+</pre>
+
+<p>A <code>text-align</code> tulajdonságban megadott érték vonatkozik a szöveg rendezésére. Alapértelmezésben ez <code>left</code> (balra igazított), ezt írtad most felül, hogy középre rendeződjön a címsor.</p>
+
+<p class="tip">+1 tipp: Nyugodtan zárd be a HTML panelt, így jobban látszik az output panelben a középre rendezés</p>
+
+<p>A <code>font-family</code> állítja be, milyen betűtípussal jelenjen meg a szöveg. A példában egy hosszú felsorolást látsz, egymáshoz igen hasonló betűtípusokból. Erre azért van szükség, mert előfordulhat, hogy valakinek a számítógépén nem található meg az a betűtípus, amit kiválasztottál. Ilyenkor a böngésző az oldal megjelenítésekor automatikusan a felsorolásban következő betűtípussal próbálkozik.</p>
+
+<p>Ha alaposabban megnézed <a href="https://medium.freecodecamp.com/please-do-learn-to-code-233597dd141c#.nlytqw7cv" title="Please do learn to code" target="_blank">a másolandó oldalt</a>, akkor láthatod, hogy a képaláírás is középre rendezett, és ugyanazt a betűtípust használja, mint a címsor. Jó lenne azonban, ha nem kellene kétszer ugyanazt leírnod. A CSS-ben erre is van lehetőség:</p>
+
+<pre data-line="1-4">
+  <code class="language-css">
+    h1, figcaption {
+      font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      color: rgba(0,0,0,.8);
+      font-size: 36px;
+    }
+  </code>
+</pre>
+
+<p>Vesszővel elválasztva több kiválasztót is megadhatsz, az utánuk következő zárójelek közötti szabályok mindegyik felsorolt kiválasztóra érvényesek lesznek. A CSS-ben leírt szabályaidat bármikor átcsoportosíthatod.</p>
+
+<p class="tip-advanced">Pro tipp: Jó gyakorlat a programozásban a DRY (Do not Repeat Yourself - ne ismételd önmagad) elv. Általában ha valamit módosítani szeretnél, és ezt egynél több helyen kellene átírnod a kódban, lesz rá egy jobb megoldás.</p>
+
+<p>A képaláírás méretét még állítsd át kisebbre:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    figcaption {
+      font-size: 11px;
+    }
+  </code>
+</pre>
+

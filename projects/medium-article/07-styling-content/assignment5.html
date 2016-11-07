@@ -1,0 +1,26 @@
+<p>A rövidebb sorok könnyen olvashatóak. Állítsd be, hogy fix szélessége legyen a cikked sorainak, akkor is, ha valaki szélesebb képernyőn olvasná azokat:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    article {
+      max-width: 700px;
+    }
+  </code>
+</pre>
+
+<p>Ha most az output panelt szélesre húzod, egy idő után a sorokat a böngésző tördelni kezdi, pedig még lenne hely nekik. A <code>max-width</code> tulajdonság értéke azt állítja be, hogy mekkora lehet az adott dolog maximális szélessége.</p>
+
+<p>Amióta a <code>body</code> margóját lenulláztuk, a szövegsorok is a panel legszélén kezdődnek. Állíts be nekik térközt:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    article {
+      padding: 10px;
+    }
+  </code>
+</pre>
+
+<p>A margóval (margin) azt állíthatod be, hogy az elem <em>körül</em> mekkora térköz legyen, a <code>padding</code> arra jó, hogy az elemen belüli tartalmat körbevevő térköz méretét állítsd be.</p>
+
+<p class="tip">+1 tipp: A padding és margin könnyebb megértésében segíthet <a href="http://css3gen.com/css-box-model/" target="_blank">ez az oldal</a>.</p>
+

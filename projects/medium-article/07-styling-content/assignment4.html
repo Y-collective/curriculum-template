@@ -1,0 +1,44 @@
+<p>Annak ellenére, hogy 100%-ot adtunk meg a kép szélességének, mégsem tölti ki a teljes output panelt. Miért lehet ez?</p>
+
+<p>Mivel nem fix méretet határoztunk meg, hanem egy százalékot (<code>width: 100%</code>), a böngésző a megjelenítéskor megnézi a kérdéses elem "szülőjének" (parent node) méreteit, és ahhoz igazodik. Ha az sem fix, akkor a szülő szülőjének méreteit, és így tovább.</p>
+
+<p>Webfejlesztőként az eszköztárad nélkülözhetetlen kelléke lesz a hibakeresésekhez a böngésződ. A sok lehetőség közül mi a <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a>-ot ajánljuk, mert rengeteg fejlesztői eszközt találhatsz benne.</p>
+
+<p>Chrome böngészőben kattints rá a JSBin output paneljében a képre jobb gombbal, és válaszd a "vizsgálat" (inspect) menüpontot. Az eredeti oldal  mellett megnyílt az oldal forráskódja (ez tartalmazza azt a részt, amit a JSBin HTML paneljébe írtunk) és az éppen kijelölt részre vonatkozó stílusszabályok is, szépen tagolva. Ezek az ablakok a Chrome fejlesztői eszközeit tartalmazzák (Chrome Developer Tools).</p>
+
+<p><img class="img-responsive center-block" src="/content/images/medium-chrome-developer.png" alt="Chrome Developer Tools"></p>
+
+<p>A forráskódban a Chrome szürkével kiemelte a képre vonatkozó részt, a stílusok között pedig láthatod az <code>img</code> elemre vonatkozó szabályokat.</p>
+
+<p>Ha a forráskódban az egérrel valamelyik sor fölé állsz, az eredeti oldalon a böngésző kiemeli a vonatkozó részt. Mutass arra a sorra, amelyik a <code>figure</code> elemet tartalmazza. Láthatod, hogy a kép és a képaláírás kék, és körülöttük a fehér rész narancssárga kiemelést kapott.</p>
+
+<p>Kattints rá a <code>figure</code> elemet tartalmazó sorra a forráskódban egyszer. A stílusok panel aljára görgetve láthatsz egy ábrát, amelyen az előző kiemelés színeivel láthatóak az adott elemre beállított méretek, térközök és margók. Nálam éppen 40px van beállítva a bal és jobb oldali margó értékének.</p>
+
+<p class="tip-advanced">Pro tipp: Az értékekre kétszer kattintva akár át is írhatod azokat, az eredeti oldal azonnal megváltozik. Ha újratöltöd az oldalt, az eredeti értékek fognak visszaállni, hiszen csak a "saját böngésződ változatát" szerkesztetted. Ugyanígy az oldal forráskódjában is bármit átírhatsz.</p>
+
+<p>De ki állította be, hogy a <code>figure</code> elemnek 40 pixeles margója legyen? A böngésző. Minden böngészőben vannak alapértelmezett stílusok (emlékezz, a <code>h1</code> például már az előtt nagyobb betűkkel jelent meg, hogy írtál rá szabályokat). Ha az alapértelmezett értékekre új értékeket adsz meg a stíluslapodon, akkor a te változatod fog érvényesülni. Amíg viszont nincsenek egyedi szabályok definiálva, a böngésző alapértelmezett szabályai vannak érvényben.</p>
+
+<p>Állítsd be, hogy a képet tartalmazó <code>figure</code> elemnek ne legyen margója (nulla érték esetén a mértékegységet nem kell kiírni):</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    figure {
+      margin: 0;
+    }
+  </code>
+</pre>
+
+<p>A kép már sokkal jobban megközelíti az output panel szélét, de még mindig nem tölti ki azt teljes szélességben. Hasonlóan a <code>figure</code> elemhez, az ezt tartalmazó <code>body</code> tag-nek is van "gyárilag" beállított margója, ezt is nulllázd le:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    body {
+      margin: 0;
+    }
+  </code>
+</pre>
+
+<p>Ha minden sikerült, akkor a kép már teljes szélességben kitölti az output panelt.</p>
+
+<p class="tip-advanced">Pro tipp: Néha furcsa dolgok történnek amiatt, hogy minden böngészőben egy kicsit más és más a "gyárilag beállított" stílus (user agent stylesheet). A nemkívánatos esetek elkerülésére szoktak használni "<a href="http://cssreset.com/" title="CSS resets">CSS reset</a>" megoldásokat. Ezek a létező összes stílustulajdonságnak adnak egy értéket, így biztosan minden böngészőben azonos alapról építkeznek majd a stílusaid.</p>
+

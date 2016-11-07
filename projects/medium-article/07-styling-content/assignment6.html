@@ -1,0 +1,23 @@
+<p>A cikk szövege ugyan már csak egy keskenyebb sávot foglal el a képernyőből, de még nincs középen.</p>
+
+<p>Ha a szöveget igazítanád középre, akkor minden sor egy kicsit máshol kezdődne és végződne, most viszont az a cél, hogy a szövegtörzset tartalmazó <code>article</code> elem legyen a képernyő közepére rendezve. Bővítsd ki a vonatkozó szabályt, hogy így nézzen ki:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    article {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 700px;
+      padding: 10px;
+    }
+  </code>
+</pre>
+
+<p>Eddig csak a <code>margin: érték;</code> formátumot használtuk. Ez valójában egy rövidítés, külön lehet definiálni minden oldal margóját (pl.: a <code>margin-bottom: 11px;</code> csak az alsó margó értékét állítja be). Amikor a <code>margin: érték;</code> formátumot használod, az egyszerre állítja mind a négy oldali margót.</p>
+
+<p>Az automatikus két oldalsó margó azt mondja a böngészőnek, hogy még nem tudjuk mennyi legyen a pontos érték, de legyen a kettő egyenlő. Így a tartalom középre kerül.</p>
+
+<p class="tip">+1 tipp: Ha nem látod a különbséget, csukd be a CSS panelt is a binben, vagy nyisd meg az outputot egy külön ablakban (kis nyíl a jobb felső sarokban).</p>
+
+<p class="tip-advanced">Pro tipp: Rövidítésben (shorthand) is megadhatod: <code>margin: 0 auto;</code>. Az első érték a felső és alsó, a második érték a két oldalsó margó értéke lesz.</p>
+

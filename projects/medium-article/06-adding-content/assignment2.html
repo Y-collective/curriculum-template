@@ -1,0 +1,29 @@
+<p>A fő címsorunk alatt lesz majd a teljes oldalszélességet kitöltő kép. Másold be a következő kódrészletet a címsor alá:</p>
+
+<pre>
+  <code class="language-html line-numbers">
+    &lt;img src=&quot;http://i.imgur.com/RC2UGg8.jpg&quot; alt=&quot;coders&quot;&gt;
+  </code>
+</pre>
+
+<p>Ha sikerült, az output részen megjelent egy elég nagy kép.</p>
+
+<h2>img</h2>
+
+<p>A bemásolt kódrészletben a kép beszúrására használjuk az <code>&lt;img&gt;</code> tag-et, ami a kép szó angol megfelelőjének (image) rövidítéséből adódik.</p>
+
+<p>Az <code>&lt;img&gt;</code> tag speciális abból a szempontból, hogy míg a legtöbb HTML tag párosan fordul elő (mint a már megismert <code>&lt;title&gt;&lt;/title&gt;</code> vagy a <code>&lt;h1&gt;&lt;/h1&gt;</code>), addig ez egy önmagát záró (self closing) tag.</p> 
+
+<p>Láthatod továbbá, hogy már nem csak egy egyszerű tag-et tartalmaz a kód, hanem attribútumokat (attributes) is. Az attribútumokhoz tartozó értékeket dupla idézőjelek veszik körbe: <code>attribútum=&quot;érték&quot;</code> Nézzük meg ezeket sorban:</p>
+
+<h3>src=""</h3>
+<p>A <code>src=&quot;&quot;</code> attribútum tárolja a kép forrását (source). Bármilyen képet hivatkozhatsz, amely elérhető az interneten.</p>
+
+<p class="tip">+1 tipp: Ha szeretnél egy képet beilleszteni internetről, akkor kattints rá jobb gombbal, és válaszd ki a "kép címének másolása" parancsot. Az így kapott linket bemásolva a <code>src</code> attribútumba már készen is vagy. Ez a módszer azonban csak gyakorlás céljából ajánlott, ugyanis így a kép eredeti tulajdonosa fizeti meg a kép interneten való tárolásának költségeit. Amikor weblapot készítesz, a hozzá tartozó képeket is a saját szervereden fogod tárolni, erről majd később tanulunk.</p>
+
+<p class="tip">+1 tipp: Ha a saját gépedről szeretnél egy képet beilleszteni, azt előbb valahogy elérhetővé kell tenned interneten. Ebben a feladatban például a <a href="http://imgur.com/" title="imgur">http://imgur.com</a> nevű szolgáltatás segítségével tároljuk a képeket.</p>
+
+<h3>alt=""</h3>
+
+<p>Az <code>alt=&quot;&quot;</code> attribútum tárolja a kép szöveges alternatíváját (alternative). Erre akkor lehet szükség, ha például nagyon lassan töltődik be a kép (látszódjon valami addig is, hogy mi várható oda), és az internetet feltérképező robotok munkáját is segíti, hogy "láthassák", mi van a képeken.</p>
+

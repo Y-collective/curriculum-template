@@ -1,0 +1,21 @@
+<p>A cikkben a kép alatt szerepel egy képaláírás is. Ezt a <code>&lt;figcaption&gt;</code> tag segítségével tudod hozzáadni az oldal tartalmához:</p>
+
+<pre>
+  <code class="language-html">
+    &lt;figcaption&gt;Learning to code at a Free Code Camp Toronto coffee-and-code.&lt;/figcaption&gt;    
+  </code>
+</pre>
+
+<p>A tag-ek egymásba ágyazhatók. Annak érdekében, hogy könnyebben tudd együtt kezelni a képet és a képaláírást, csomagold be azokat egy <code>&lt;figure&gt;</code> tag segítségével (ez az ábrák "becsomagolására" használt HTML tag), így:</p>
+
+<pre>
+  <code class="language-html line-numbers">
+    &lt;figure&gt;
+      &lt;img src=&quot;http://i.imgur.com/RC2UGg8.jpg&quot; alt=&quot;coders&quot;&gt;
+      &lt;figcaption&gt;Learning to code at a Free Code Camp Toronto coffee-and-code.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  </code>
+</pre>
+
+<p class="tip-advanced">Pro tipp: Mindig ügyelj arra, hogy tag-ek egymásba ágyazásakor a később megnyitott tag-eket zárd be előbb, sorban. Tehát <code>&lt;figure&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;</code> és nem <code>&lt;figure&gt;&lt;figcaption&gt;&lt;/figure&gt;&lt;/figcaption&gt;</code></p>
+

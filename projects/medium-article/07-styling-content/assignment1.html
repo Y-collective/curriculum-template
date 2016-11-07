@@ -1,0 +1,49 @@
+<p>Minden tartalom szerepel az oldalon, amit szerettünk volna, logikus egységekbe szervezve. A tartalmi egységek megformázása áll még előttünk.</p>
+
+<p>A HTML tehát leírja az oldal tartalmát, a CSS határozza meg annak stílusát.</p>
+
+<p>Kattints rá a JSBin CSS paneljére (ha még nincs nyitva), ide fogjuk írni a kódot.</p>
+
+<p>A CSS kód a következőképpen néz ki:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    kivalaszto {
+      tulajdonsag: ertek;
+    }
+  </code>
+</pre>
+
+<p>A <code>kiválasztó</code> (selector) megmondja, hogy mire legyen érvényes a szabály. A szabályon belül pedig különböző <code>tulajdonságoknak</code> (property) adhatunk értéket (value).</p>
+
+<p class="tip">+1 tipp: Mindig figyelj a programozásnál a zárójelek és a különböző pontok, vesszők használatára. Ezek jelzik a programnyelv értelmezésénél a dolgok kezdetét és végét.</p>
+
+<p>Első lépésként állítsd be, hogy a legnagyobb címsor nagyobb betűméretű legyen, és fekete helyett szürke színű. Másold át a következő kódrészletet:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    h1 {
+      font-size: 36px;
+      color: rgba(0,0,0,.8);
+    }
+  </code>
+</pre>
+
+<p>A <code>h1</code> mondja meg, hogy az összes ilyen tag-be csomagolt HTML tartalomra legyen érvényes mindaz a szabály, ami a kapcsos zárójelek között következik.</p>
+
+<p>A <code>font-size</code> állítja a betűméretet, itt a megjelölt 36px nagyságúra.</p>
+
+<p>A <code>color</code> szabja meg a betűk színét. A szín többféleképpen megadható, a példában az <code>rgba</code> formátumot választottuk, ahol:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    rgba(piros, zöld, kék, átlászóság)
+  </code>
+</pre>
+
+<p>ahol a <code>piros</code>, <code>zöld</code>, és <code>kék</code> értékek 0 és 255 közötti számok, az <code>átlátszóság</code> pedig egy 0 és 1 közötti tört szám, tizedesponttal. Pl. <code>0.78</code>. (A tört számoknál a CSS csak pontot fogad el, tehát pl. a 0,12 érték helytelen lenne.) Ha a tört szám egészrésze nulla, javasolt azt elhagyni (ahogy a példában is látod).</p>
+
+<p class="tip">+1 tipp: Ezen a <a href="http://www.css3maker.com/css-3-rgba.html" target="_blank">színkeverő oldalon</a> közvetlenül az R (red), G (green), B (blue) és A (alpha, átlátszóság) összetevőket állíthatod, így biztosan megérted, hogyan keverednek a színek. Ha még nem vagy otthon az RGB-színkeverésben, játssz kicsit a csúszkákkal, hogy jobban megmaradjon. A jobb oldalon pedig ki tudod másolni a CSS kódot.</p>
+
+<p class="tip-advanced">Pro tipp: A példában valójában fekete színt használunk, 80%-os átlátszósággal, emiatt látszik a fehér háttéren szürkének. Ez egy jó gyakorlat, abban segít a későbbiekben, hogy a szövegünk az oldal háttérszínének megváltoztatása esetén is jól mutasson.</p>
+

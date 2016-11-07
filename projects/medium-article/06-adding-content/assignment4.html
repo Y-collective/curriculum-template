@@ -1,0 +1,37 @@
+<p>Most add hozzá az első három bekezdés tartalmát az ábra alá (de még mindig a záró <code>&lt;body&gt;</code> tag elé):</p>
+
+<pre>
+  <code class="language-html line-numbers">
+    &lt;article&gt;
+      &lt;p&gt;This morning I woke up to dozens messages from students who had read an article titled &ldquo;Please Don&rsquo;t Learn to Code.&rdquo;&lt;/p&gt;
+      &lt;p&gt;At first, I assumed &lt;a href=&quot;http://blog.codinghorror.com/please-dont-learn-to-code/&quot; title=&quot;Jeff Atwood&quot;&gt;Jeff Atwood&rsquo;s 2012 article&lt;/a&gt; had spontaneously reappeared on Reddit. But no &mdash; this was a &lt;a href=&quot;http://techcrunch.com/2016/05/10/please-dont-learn-to-code&quot; title=&quot;Tech crunch&quot;&gt;brand new Tech Crunch article&lt;/a&gt; of the same name, which echoed Atwood&rsquo;s assertion that encouraging everyone to learn programming is like encouraging everyone to learn plumbing.&lt;/p&gt;
+      &lt;p&gt;Here&rsquo;s why programming &mdash; unlike plumbing &mdash; is an important skill that everyone should learn: &lt;strong&gt;programming is how humans talk to machines.&lt;/strong&gt;&lt;/p&gt;
+    &lt;/article&gt;
+  </code>
+</pre>
+
+<h2>&lt;article&gt;</h2>
+
+<p>Az <code>&lt;article&gt;</code> hasonló célt szolgál a szövegnél, mint a &lt;figure&gt; az ábránál. Ebbe tudod "becsomagolni" a cikk tartalmát, így könnyebben tudod egyben kezelni az egy helyre tartozó dolgokat.</p>
+
+<p class="tip-advanced">Pro tipp: Az <code>&lt;article&gt;</code> és a <code>&lt;figure&gt;</code> is helyettesíthetőek lennének egy <code>&lt;div&gt;</code> tag-gel, de célszerűbb ezeket az úgynevezett szemantikus (semantic) tag-eket használni, mert utalnak a bennük szereplő tartalomra, és megkönnyítik az oldalad gépek általi értelmezését. Ez azért fontos, mert a Google (és más keresők) jutalmazzák azokat az oldalakat, amelyek könnyen indexelhetőek. Ha a robotjaik számára könnyen olvasható oldalt építesz, magasabbra fogsz kerülni a keresési találtaok között. Ez a keresőoptimalizálás (Search Engine Optimization - SEO) egyik alapvető eszköze.</p>
+
+<h2>&lt;p&gt;</h2>
+
+<p>A <code>&lt;p&gt;</code> zárja magába a bekezdéseket (paragraph). Ha próbálkozol egy kicsit a szövegben, észreveheted, hogy hiába nyomsz extra entereket, a megjelenített eredményben nem fognak látszani. A böngésző az extra sortöréseket (és extra szóközöket is) figyelmen kívül hagyja. Ha új bekezdést szeretnél kezdeni, használj egy új <code>&lt;p&gt;</code> tag-et. Mindez azért van így, hogy szép, jól olvasható kódot írhass, a kód szerkezete legyen elkülönítve a kész weblap elrendezésétől.</p>
+
+<h2>&lt;a&gt;</h2>
+
+<p>Ha linkeket szeretnél elhelyezni az oldalon, az <code>&lt;a&gt;</code> (anchor, mint a horgony angolul) tag-et kell használnod. A két tag közötti szöveg fog megjelenni az oldalon, kattintható linkként.</p>
+
+<h3>A linkeknél használt attribútumok</h3>
+
+<p>Hasonlóan a hivatkozott képekhez, a linkeknél is attribútumok segítségével adhatod meg a tartalmat. A <code>href</code> (hypertext reference) a hivatkozott oldal címét tartalmazza, a <code>title</code> attribútum értéke pedig akkor jelenik meg, ha az egérrel a hivatkozásra mutatsz.</p>
+
+<h2>&lt;strong&gt;</h2>
+
+<p>Az utolsó bekezdésben a mondandó hangsúlyosságára hívja fel a figyelmet a <code>&lt;strong&gt;</code> (szó szerint fordítva erős, vastag) kiemelés. Bár ez első ránézésre formázásnak tűnhet, emiatt a CSS-ben lehetne a helye, de itt ezzel a megjelöléssel nem a szöveg sílusát, hanem a tartalom szerepét adod meg. Így már a tartalom szintjén jelezheted, hogy a kiemelt rész fontos (így a gépek is hamarabb értelmezhetik az oldalt).</p>
+
+<p class="tip-advanced">Pro tipp: A <code>&lt;strong&gt;</code> mellett használatos még az <code>&lt;em&gt;</code> (hangsúlyos - emphasised) kiemelés is. Ha egy gyengénlátó ember felolvasóprogrammal “nézi” a weboldalad, akkor a felolvasóprogram a kiemelt szavakat enyhén hangosabban, nyomatékosabban fogja neki felolvasni. A hagyományos böngészők a <code>&lt;strong&gt;</code> tag tartalmát <strong>félkövér</strong>, az <code>&lt;em&gt;</code> tag tartalmát <em>dőlt</em> betűkkel jelenítik meg.
+</p>
+

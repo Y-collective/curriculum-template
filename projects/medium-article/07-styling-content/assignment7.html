@@ -1,0 +1,29 @@
+<p>A három bekezdés szövegét is formázd meg:</p>
+
+<pre>
+  <code class="language-css line-numbers">
+    p {
+      color: rgba(0,0,0,.8);
+      font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+      font-size: 21px;
+      letter-spacing: -.003em;
+      line-height: 1.58;
+    }
+  </code>
+</pre>
+
+<p>A fenti kódból két sor lehet újdonság:</p>
+
+<h2>letter-spacing</h2>
+
+<p>A <code>letter-spacing</code> a betűk közötti közöket állítja, esztétikusabbá, olvashatóbbá tehető vele a folyó szöveg.</p>
+
+<p>A példában használt érték mértékegysége nem pixel, hanem <code>em</code>. Az eddig használt pixellel ellentétben ez nem egy abszolút, hanem egy relatív mértékegység. Az adott elemre vonatkozó betűméret az alapja (jelen példában 21px az elemre vonatkozó betűméret, tehát a böngészőben a betűköz értéke 21px * -0.003 = -0.063 pixel). A relatív egységeket arra lehet használni, hogy különböző kijelzőméreteken arányosak maradjanak a méretek.</p>
+
+<p class="tip-advanced">Pro tipp: Ha rákattintasz jobb gombbal a szövegre az output panelben, és a vizsgálat (inspect) parancsot választod, a developer tools ablakokban a stílusoknál kiválaszthatod a számolt értékek (computed) mutatását. Itt (sokat) lefelé görgetve megtalálod a line-height paramétert, pixelre számolt értékével.</p>
+
+
+<h2>line-height</h2>
+
+<p>A <code>line-height</code> a szövegben a sormagasságot állítja. Mértékegység nélküli szám.</p>
+
